@@ -1,0 +1,18 @@
+// ATLSimpleCalculatorComponent.idl : IDL source for ATLSimpleCalculatorComponent
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (ATLSimpleCalculatorComponent.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	uuid(a96484d2-d503-4e1d-9487-cd9d64e6b331),
+	version(1.0),
+]
+library ATLSimpleCalculatorComponentLib
+{
+	importlib("stdole2.tlb");
+};
+
