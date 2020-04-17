@@ -8,11 +8,29 @@ import "oaidl.idl";
 import "ocidl.idl";
 
 [
-	uuid(a96484d2-d503-4e1d-9487-cd9d64e6b331),
+	object,
+	uuid(91E4BC03-6E63-49C7-913D-6F66329514A4),
+	oleautomation,
+	nonextensible,
+	pointer_default(unique)
+]
+interface ISimpleCalculator : IUnknown {
+	[id(1)] HRESULT Add([in] int a, [in] int b, [out, retval] int* result);
+};
+
+[
+	uuid(aabe3e43-e4a5-4b4d-8f9f-0f2faeda17a9),
 	version(1.0),
 ]
 library ATLSimpleCalculatorComponentLib
 {
 	importlib("stdole2.tlb");
-};
 
+	[
+		uuid(179a5a24-b7f1-43d4-978c-36b585fcac8c)
+	]
+	coclass Calculator
+	{
+		[default] interface ISimpleCalculator;
+	};
+};

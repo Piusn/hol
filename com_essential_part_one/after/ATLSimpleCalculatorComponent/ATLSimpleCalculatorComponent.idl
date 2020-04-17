@@ -32,7 +32,6 @@ library ATLSimpleCalculatorComponentLib
 	coclass Calculator
 	{
 		[default] interface ISimpleCalculator;
-		//interface ITrigCalculator;
 	};
 };
 
